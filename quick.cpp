@@ -2,19 +2,29 @@
 using namespace std;
 
 int partation(int arr[],int s,int e){
+    //first place=start
     int pivot=arr[s];
     int cnt=0;
+    
     //pivot index ko place kr na h
+
+    
     for(int i=s+1;i<=e;i++){
         if(arr[i]<=pivot){
             cnt++;
         }
     }
 
+    //place piovet right index
+    
     int pivotindex=s+cnt;
     swap(arr[pivotindex],arr[s]);
+
+    
     //left and right place chek
     //<p|p|>p
+
+    
     int i=s,j=e;
     while(i<pivotindex && j>pivotindex){
 
